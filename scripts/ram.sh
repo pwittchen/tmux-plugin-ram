@@ -4,7 +4,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "$CURRENT_DIR/helpers.sh"
 
-print_uptime() {
+print_ram_usage() {
   if is_linux; then
     function getRamUsage() {
         ramUsage=$(free -m | grep $memKeyword | awk '{print $3/$2 * 100}' | cut -f1 -d".")
@@ -24,7 +24,7 @@ print_uptime() {
 }
 
 main() {
-  print_uptime
+  print_ram_usage
 }
 
 main
