@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 get_tmux_option() {
